@@ -30,8 +30,8 @@ private:
     //Auxiliar methods to process the chars
     void scanToken(std::vector<Token>& tokens); 
     char advance(); //Reads the current character returns it and advances
-    char peek() const;  //Reads the current character without consuming it
-    char isAtEnd() const; //Verifies if we are at the end of the code
+    char peek() const;  //Reads the next character without consuming it
+    bool isAtEnd() const; //Verifies if we are at the end of the code
 
     //Validation functions
     bool isNumber(char c) const; //Verifies if is number
