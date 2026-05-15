@@ -1,4 +1,4 @@
-//Pragma for eviting over reading of the same file
+//Pragma for eviting over reading the same file
 #pragma once
 
 //Include of required elements
