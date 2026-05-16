@@ -83,7 +83,7 @@ std::string StaticAnalyzer::stringifyCondition(const ConditionNode* cond) {
     else if (auto fact = dynamic_cast<const FactConditionNode*>(cond)) {
         return fact->factId;
     }
-    //Verification for and AND
+    //Verification for an AND
     else if (auto andCond = dynamic_cast<const AndConditionNode*>(cond)) {
         std::string left = stringifyCondition(andCond->leftCondition.get());
         std::string right = stringifyCondition(andCond->rightCondition.get());
