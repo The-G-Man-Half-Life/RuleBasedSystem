@@ -1,0 +1,20 @@
+# ninja log v7
+14	2873	8006717483431846	CMakeFiles/rule_system.dir/src/Parser.cpp.obj	c42db85c7fb4d679
+31	2420	8006749005880568	CMakeFiles/rule_system.dir/src/main.cpp.obj	ac3451885ba12027
+24	3228	8006717483512753	CMakeFiles/rule_system.dir/src/StaticAnalyzer.cpp.obj	f5e8e81b59c0ecba
+71	1101	8006720335520163	CMakeFiles/rule_system.dir/src/Lexer.cpp.obj	e7cb0964dbb41019
+39	1013	8006749005956464	CMakeFiles/rule_system.dir/src/Interpreter.cpp.obj	865b5f78bdbe3c8d
+1061	1309	8006751076079441	rule_system.exe	1cf0112a2c46199d
+2	264	8006753695805156	build.ninja	dcc0ab17af7712a0
+2	264	8006753695746472	C:/Users/mateo/Documents/RuleBasedSystem/build/cmake_install.cmake	dcc0ab17af7712a0
+25	1060	8006751065754110	CMakeFiles/rule_system.dir/src/Environment.cpp.obj	6c9c6ab8ead5d0f5
+49	1991	8006753715610200	CMakeFiles/rule_system.dir/src/main.cpp.obj	ac3451885ba12027
+1992	2238	8006753735038268	rule_system.exe	1cf0112a2c46199d
+7	2038	8006756180061387	CMakeFiles/rule_system.dir/src/main.cpp.obj	ac3451885ba12027
+2039	2294	8006756200309928	rule_system.exe	1cf0112a2c46199d
+7	1988	8006759895492442	CMakeFiles/rule_system.dir/src/main.cpp.obj	ac3451885ba12027
+1989	2237	8006759915361932	rule_system.exe	1cf0112a2c46199d
+6	2004	8006761122547143	CMakeFiles/rule_system.dir/src/main.cpp.obj	ac3451885ba12027
+2004	2251	8006761142521061	rule_system.exe	1cf0112a2c46199d
+7	1982	8006763090282811	CMakeFiles/rule_system.dir/src/main.cpp.obj	ac3451885ba12027
+1983	2233	8006763110093042	rule_system.exe	1cf0112a2c46199d

@@ -15,13 +15,13 @@ public:
     explicit Lexer(const std::string& source); // Used explicit to evite automatic conversion to strings
 
     //Tokenize takes care of taking the source code and turn it into a list of tokens
-    std::vector<Token> Tokenize();
+    std::vector<Token> tokenize();
 
 private:
     std::string source;
-    int start = 0;      //Start of the lexeme being identified right now
-    int current = 0;    //Current character being evaluated
-    int line = 1;       //Current line being reviewed in the file
+    std::size_t start = 0;      //Start of the lexeme being identified right now
+    std::size_t current = 0;    //Current character being evaluated
+    int line = 1;              //Current line being reviewed in the file
 
     //Dictionary to look fast if a word is a key word
     std::unordered_map<std::string, TokenType> keywords; 

@@ -13,11 +13,11 @@ Lexer::Lexer(const std::string& source) : source(source) {
     keywords["AND"] = TokenType::AND;
 }
 
-std::vector<Token> Lexer::Tokenize() {
+std::vector<Token> Lexer::tokenize() {
     std::vector<Token> tokens;
 
     //Reading until there are no more characters
-    while (isAtEnd == false){
+    while (!isAtEnd()){
         start = current; //The beginning of the next token is our current position
         scanToken(tokens);
     }

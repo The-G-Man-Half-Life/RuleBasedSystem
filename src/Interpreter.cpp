@@ -2,11 +2,11 @@
 #include "../include/Interpreter.hpp"
 #include <stdexcept>
 
-Interpreter::Interpreter(const ProgramNode* program, Environment env)
-    :program(program), env(env) {}
+Interpreter::Interpreter(const ProgramNode* program, Environment& env)
+    : program(program), env(env) {}
 
 void Interpreter::executeCycle(){
-    if(program == false){
+    if (program == nullptr){
         return;
     }
 
@@ -48,8 +48,8 @@ std::set<std::string> Interpreter::getActivatedFacts() const{
 }
 
 bool Interpreter::evaluateCondition(const ConditionNode* cond) const {
-    if(cond == false){
-        return false; 
+    if (cond == nullptr){
+        return false;
     }
     
     //Scenario 1: Is a comparison

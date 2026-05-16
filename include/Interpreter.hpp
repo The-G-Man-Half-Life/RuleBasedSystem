@@ -13,7 +13,7 @@
 class Interpreter{
 public:
     //Receives the tree (program) and the states (start variables and states)
-    Interpreter(const ProgramNode* program, Environment env);
+    Interpreter(const ProgramNode* program, Environment& env);
 
     //Execute the fixed point cycle
     void executeCycle();
