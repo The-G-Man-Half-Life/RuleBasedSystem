@@ -115,7 +115,7 @@ void executeEngine(const std::string& rules, const std::string& state) {
     env.loadFromString(state);
 
     StaticAnalyzer analyzer;
-    std::vector<std::string> staticAnalysisMessages = analyzer.analyze(ast.get());
+    std::vector<std::string> staticAnalysisMessages = analyzer.analyze(ast.get(), env);
 
     Interpreter interpreter(ast.get(), env);
     interpreter.executeCycle(); 

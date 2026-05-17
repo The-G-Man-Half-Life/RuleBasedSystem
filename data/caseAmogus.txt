@@ -1,8 +1,0 @@
-=== RULES ===
-rule r1:
-if kills > 10 AND  survivors < 12 then alert
-rule r2:
-if alert then we_are_dead
-=== STATE ===
-kills = 20
-survivors = 1
