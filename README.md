@@ -5,8 +5,8 @@
 ---
  
 ## Authors
-Mateo Montoya Ospina
-Juan Pablo Lopez Lidueña
+- Mateo Montoya Ospina
+-  Juan Pablo Lopez Lidueña
  
 ---
  
