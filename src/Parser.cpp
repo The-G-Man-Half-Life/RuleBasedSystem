@@ -43,7 +43,7 @@ std::unique_ptr<RuleNode> Parser::parseRule(){
     auto condition = parseCondition();
 
     //Error where the 'then' was expected but not received'
-    consume(TokenType::THEN, "The reserved word 'THEN' was expected but not received after the condition");
+    consume(TokenType::THEN, "The reserved word 'then' was expected but not received after the condition");
 
     //Parsing the action
     auto action = parseAction();

@@ -3,12 +3,13 @@
 #include <map>
 #include <set>
 
-// Función auxiliar recursiva para encontrar todos los hechos que las reglas necesitan en sus IFs
+// Auxiliar recursive functions to find all the facts the rules need in their IFs
 void extractRequiredFacts(const ConditionNode* cond, std::set<std::string>& reqFacts) {
     if (!cond) return;
     if (auto fact = dynamic_cast<const FactConditionNode*>(cond)) {
         reqFacts.insert(fact->factId);
-    } else if (auto andCond = dynamic_cast<const AndConditionNode*>(cond)) {
+    } 
+    else if (auto andCond = dynamic_cast<const AndConditionNode*>(cond)) {
         extractRequiredFacts(andCond->leftCondition.get(), reqFacts);
         extractRequiredFacts(andCond->rightCondition.get(), reqFacts);
     }

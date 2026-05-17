@@ -121,36 +121,40 @@ void Lexer::processNumber(std::vector<Token>& tokens){
 }
 
 void Lexer::processIdentifier(std::vector<Token>& tokens){
-    //As Identifiers consist of letters words and underscores we use alphanumeric
-    while (isAlphaNumeric(peek())){
+ // Read all the words
+    while (isAlphaNumeric(peek())) {
         advance();
     }
 
-    //Selecting the identifier
-    std::string text = source.substr(start, current-start);
-    
-
-    //Checking if the word is a reserved word
+    std::string text = source.substr(start, current - start);
     TokenType type;
-    //Verified reserved words
+
+    // Search for a keyword
     auto it = keywords.find(text);
-    
-    if(it != keywords.end()){
-        type = it -> second; //Is a keyword
-    }
-    else{
-        type = TokenType::ID; //Recognizes what found as an id
-    
-        //Extra verifications required by the document
-        //Verify if the first letter is not lowercase by using ASCII values
-        if (text[0] < 'a' || text[0] > 'z'){
-            std::cerr << "Lexical error in line " << line << ": The identifier: '" << text << "' must begin with a lowercase letter. \n";
+    if (it != keywords.end()) {
+        type = it->second; 
+    } else {
+        // If is not a keyword then must be an id
+        type = TokenType::ID; 
+                
+        // 1. Must begin with lower case
+        if (text[0] < 'a' || text[0] > 'z') {
+            std::cerr << "Lexical error " << line << ": The id '" << text << "' must begin with a lower case letter.\n";
             type = TokenType::ERROR;
+        } 
+        // 2. The rest of the text can't contain capital case letter
+        else {
+            for (char c : text) {
+                if (c >= 'A' && c <= 'Z') {
+                    std::cerr << "Lexical error in line " << line << ": The identifier '" << text << "' contains capital case letters.\n";
+                    type = TokenType::ERROR;
+                    break;
+                }
+            }
         }
     }
-    
-    addToken(tokens, type);
-}
+
+    addToken(tokens, type);}
 
 //Add the identifier or error
 void Lexer::addToken(std::vector<Token>& tokens, TokenType type){
